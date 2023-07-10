@@ -5,6 +5,9 @@ var user = {
   hobby: "Soccer",
   isMarried: false,
   spells: ["abrakadra", "shazam", "boo"],
+  shout: function () {
+    console.log("AHHHHHH!");
+  },
 };
 
 var list = [
