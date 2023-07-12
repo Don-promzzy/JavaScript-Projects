@@ -4,6 +4,14 @@ var database = [
     username: "promise",
     password: "pro1122",
   },
+  {
+    username: "wisdom",
+    password: "wis1122",
+  },
+  {
+    username: "miracle",
+    password: "mir1122",
+  },
 ];
 
 // Create an array called "newsfeed" which contains 3 objects with properties "username" and "timeline".
@@ -22,15 +30,36 @@ var newsfeed = [
   },
 ];
 
-var userNamePrompt = prompt("what is your username?");
-var passWordPrompt = prompt("what is your password?");
+// CHECK IF USER DETAIL IS VALID
+function isUserVaild(username, password) {
+  for (var i = 0; i < database.length; i++) {
+    if (
+      database[i].username === username &&
+      database[i].password === password
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
 
-function signIn(user, pass) {
-  if (user === database[0].username && pass === database[0].password) {
+function signIn(username, password) {
+  if (isUserVaild(username, password)) {
     console.log(newsfeed);
   } else {
     alert("Sorry, wrong username and password!");
   }
+
+  // OLD VERSION
+  // if (user === database[0].username && pass === database[0].password) {
+  //   console.log(newsfeed);
+  // } else {
+  //   alert("Sorry, wrong username and password!");
+  // }
 }
 
+var userNamePrompt = prompt("what is your username?");
+var passWordPrompt = prompt("what is your password?");
+
+// INVOKE SIGNIN FUNCTION
 signIn(userNamePrompt, passWordPrompt);
