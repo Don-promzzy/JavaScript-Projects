@@ -1,0 +1,15 @@
+.app {
+  color: aqua;
+  border: 3px solid black;
+}
+
+/* Style for list items */
+li {
+  margin: 20px 0;
+}
+
+.fa-solid {
+  margin-left: 20px;
+  color: red;
+  cursor: pointer;
+}
